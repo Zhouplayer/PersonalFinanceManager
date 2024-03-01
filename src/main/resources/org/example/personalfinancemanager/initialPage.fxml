@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.personalfinancemanager.InitialController">
+
+    <VBox alignment="CENTER" spacing="10" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" xmlns:fx="http://javafx.com/fxml">
+
+
+      <HBox alignment="CENTER" prefHeight="100.0" spacing="10" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+          <Label text="Income:" />
+          <Label fx:id="lblIncome" text="Label" />
+          <Label text="Expend:" />
+          <Label fx:id="lblExpend" text="Label" />
+      </HBox>
+
+      <HBox alignment="CENTER" prefHeight="100.0" spacing="10" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+          <Label text="Today's date:" />
+          <Label fx:id="lblDate" text="Label" />
+      </HBox>
+
+        <HBox alignment="CENTER" prefHeight="100.0" spacing="10" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+            <Button fx:id="btnReport" onAction="#onReportButtonClick" text="Report" />
+            <Button fx:id="btnBankCards" onAction="#onBankCardsButtonClick" text="Bank Cards" />
+        </HBox>
+
+        <TreeView fx:id="treeViewTransactionList" VBox.vgrow="ALWAYS">
+            <!-- Custom cells for each transaction would go here -->
+        </TreeView>
+
+        <HBox alignment="CENTER" prefHeight="100.0" spacing="10" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+             <Button fx:id="btnAdd" onAction="#onAddButtonClick" text="Add" />
+             <Button fx:id="btnModify" onAction="#onModifyButtonClick" text="Modify" />
+             <Button fx:id="btnDelete" onAction="#onDeleteButtonClick" text="Delete" />
+        </HBox>
+
+    </VBox>
+
+</AnchorPane>
