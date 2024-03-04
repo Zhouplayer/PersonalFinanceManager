@@ -4,35 +4,20 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane prefHeight="400.0" prefWidth="600.0" alignment="center" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.personalfinancemanager.BankCardsPageController">
-    <!-- RBC Card -->
-    <VBox GridPane.columnIndex="0" GridPane.rowIndex="0" alignment="CENTER">
-        <ImageView fx:id="imgRBC" fitHeight="150" preserveRatio="true" />
-        <Label fx:id="lblRBCTotalIncome" text="Income: $0" />
-        <Label fx:id="lblRBCTotalExpense" text="Expense: $0" />
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.personalfinancemanager.BankCardsPageController">
+
+    <VBox alignment="CENTER" spacing="10" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" xmlns:fx="http://javafx.com/fxml">
+
+        <ListView fx:id="listViewBankCardList" VBox.vgrow="ALWAYS" >
+
+        </ListView>
+
+        <HBox alignment="CENTER" prefHeight="100.0" spacing="10">
+            <Button alignment="CENTER" onAction="#handleAddAction" text="Add" />
+            <Button alignment="CENTER" onAction="#onDeleteClick" text="Delete" />
+            <Button alignment="CENTER" onAction="#handleBackAction" text="Back" />
+        </HBox>
     </VBox>
 
-    <!-- CIBC Card -->
-    <VBox GridPane.columnIndex="1" GridPane.rowIndex="0" alignment="CENTER">
-        <ImageView fx:id="imgCIBC" fitHeight="150" preserveRatio="true" />
-        <Label fx:id="lblCIBCTotalIncome" text="Income: $0" />
-        <Label fx:id="lblCIBCTotalExpense" text="Expense: $0" />
-    </VBox>
-
-    <!-- BMO Card -->
-    <VBox GridPane.columnIndex="0" GridPane.rowIndex="1" alignment="CENTER">
-        <ImageView fx:id="imgBMO" fitHeight="150" preserveRatio="true" />
-        <Label fx:id="lblBMOTotalIncome" text="Income: $0" />
-        <Label fx:id="lblBMOTotalExpense" text="Expense: $0" />
-    </VBox>
-
-    <!-- TD Card -->
-    <VBox GridPane.columnIndex="1" GridPane.rowIndex="1" alignment="CENTER">
-        <ImageView fx:id="imgTD" fitHeight="150" preserveRatio="true" />
-        <Label fx:id="lblTDTotalIncome" text="Income: $0" />
-        <Label fx:id="lblTDTotalExpense" text="Expense: $0" />
-    </VBox>
-
-    <Button GridPane.columnIndex="0" GridPane.rowIndex="2" alignment="CENTER" onAction="#handleBackAction" text="Back" />
-
-</GridPane>
+</AnchorPane>

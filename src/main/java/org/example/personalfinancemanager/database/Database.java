@@ -1,5 +1,6 @@
 package org.example.personalfinancemanager.database;
 
+import org.example.personalfinancemanager.model.BankCard;
 import org.example.personalfinancemanager.model.Transaction;
 
 import java.sql.*;
@@ -30,6 +31,14 @@ public class Database {
                     + "	paymentDate text NOT NULL"
                     + ");";
             stmt.execute(sql);
+
+            // SQL statement for creating the bankCard table
+            String sqlBankCard = "CREATE TABLE IF NOT EXISTS bankCards ("
+                    + " id integer PRIMARY KEY,"
+                    + " bankName TEXT NOT NULL,"
+                    + " imagePath TEXT NOT NULL"
+                    + ");";
+            stmt.execute(sqlBankCard);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
@@ -170,4 +179,58 @@ public class Database {
         return transaction;
     }
 
+
+
+
+    public static List<BankCard> getAllBankCards() {
+        List<BankCard> bankCardList = new ArrayList<>();
+        String sql = "SELECT * FROM bankCards";
+
+        try (Connection conn = getConnection();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+
+            while (rs.next()) {
+                BankCard bankCard = new BankCard(
+                        rs.getInt("id"),
+                        rs.getString("bankName"),
+                        rs.getString("imagePath")
+                );
+                bankCardList.add(bankCard);
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+
+        return bankCardList;
+    }
+
+    // Method to delete a bankCard
+    public static void deleteBankCard(int id) {
+        String sql = "DELETE FROM bankCards WHERE id = ?";
+
+        try (Connection conn = getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setInt(1, id);
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    // Method to add a bankCard
+    public static void insertBankCard(String bankName, String imagePath) {
+        String sql = "INSERT INTO bankCards (bankName, imagePath) VALUES (?, ?)";
+
+        try (Connection conn = getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, bankName);
+            pstmt.setString(2, imagePath);
+
+            pstmt.executeUpdate();
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
 }

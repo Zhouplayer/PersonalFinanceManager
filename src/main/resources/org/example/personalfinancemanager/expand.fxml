@@ -19,10 +19,12 @@
             <String fx:value="CIBC" />
             <String fx:value="BMO" />
             <String fx:value="TD" />
+            <String fx:value="ScotiaBank" />
             <!-- Add more categories as needed -->
          </FXCollections>
       </items>
    </ComboBox>
+
    <ComboBox fx:id="categoryComboBox" promptText="Select a category">
       <items>
          <FXCollections fx:factory="observableArrayList">
