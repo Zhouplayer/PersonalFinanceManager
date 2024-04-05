@@ -110,7 +110,7 @@ public class InitialController implements Initializable {
     @FXML
     private void onAddButtonClick() {
         try {
-            PersonalFinanceManager.setRoot("expand.fxml");
+            PersonalFinanceManager.setRoot("expend.fxml");
         } catch (IOException e) {
             e.printStackTrace();
         }

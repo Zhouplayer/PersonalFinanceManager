@@ -5,7 +5,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" prefHeight="500.0" prefWidth="510.0" spacing="20" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.personalfinancemanager.ModifyController">
+<VBox alignment="CENTER" prefHeight="500.0" prefWidth="510.0" spacing="20"
+      xmlns="http://javafx.com/javafx/17.0.2-ea"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.personalfinancemanager.ModifyController"
+      stylesheets="@style.css">
+
+
     <!-- Radio Buttons for Transaction Type -->
     <HBox alignment="CENTER" spacing="10">
         <RadioButton fx:id="radioButtonExpense" onAction="#onRadioButtonExpenseAction" selected="true" text="Expense" />

@@ -3,13 +3,11 @@ package org.example.personalfinancemanager;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.layout.VBox;
-import org.example.personalfinancemanager.model.Transaction;
 import org.example.personalfinancemanager.database.Database;
 import java.io.IOException;
 import java.time.LocalDate;
 
-public class ExpandController {
+public class ExpendController {
 
     @FXML
     private ComboBox<String> categoryComboBox;

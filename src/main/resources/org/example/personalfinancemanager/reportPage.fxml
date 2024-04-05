@@ -4,16 +4,25 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="20" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.personalfinancemanager.ReportPageController">
+<?import javafx.geometry.Insets?>
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="10"
+      xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.personalfinancemanager.ReportPageController"
+      stylesheets="@style.css">
 
-    <Label text="Report Summary" />
-    <PieChart fx:id="incomeChart" title="Income vs Expense">
-        <!-- Data added dynamically in controller -->
-    </PieChart>
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10" />
+    </padding>
 
-    <PieChart fx:id="expenseChart" title="Category Distribution">
-        <!-- Data added dynamically in controller -->
-    </PieChart>
+    <Label fx:id="lblReportSummary" text="Report Summary" styleClass="report-title" />
 
-    <Button onAction="#handleBackAction" text="Back" />
+    <StackPane alignment="CENTER">
+        <PieChart fx:id="incomeChart" title="Income vs Expense" />
+    </StackPane>
+
+    <StackPane alignment="CENTER">
+        <PieChart fx:id="expenseChart" title="Expend Category Distribution" />
+    </StackPane>
+
+    <Button fx:id="btnBack" onAction="#handleBackAction" text="Back" />
 </VBox>

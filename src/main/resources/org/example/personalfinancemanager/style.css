@@ -1,0 +1,104 @@
+/* Combined style.css */
+
+/* Basic application styling */
+.root {
+    -fx-font-family: 'Arial';
+    -fx-background-color: #f2f2f2;
+}
+
+/* VBox layout styling */
+.vbox {
+    -fx-padding: 20;
+    -fx-spacing: 15;
+    -fx-alignment: center;
+}
+
+/* Label styling */
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+    -fx-font-weight: bold;
+}
+
+/* Report title styling */
+.report-title {
+    -fx-font-size: 24px;
+    -fx-text-fill: #333;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(one-pass-box, black, 8, 0.0, 2, 0);
+}
+
+/* Button styling */
+.button {
+    -fx-padding: 8 15;
+    -fx-background-color: #4169E1;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+/* Button hover effect */
+.button:hover {
+    -fx-background-color: #00BFFF;
+}
+
+/* TreeView styling */
+.tree-view {
+    -fx-padding: 5;
+    -fx-background-color: #fff;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1;
+}
+
+/* HBox layout styling */
+.hbox {
+    -fx-spacing: 5;
+    -fx-alignment: center;
+}
+
+/* HBox label styling */
+.hbox > .label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* PieChart padding */
+.pie-chart {
+    -fx-padding: 15;
+}
+
+/* ComboBox styling */
+.combo-box {
+    -fx-padding: 5;
+    -fx-background-color: #add8e6;
+    -fx-border-color: #333;
+    -fx-border-width: 1;
+}
+
+/* Radio Button styling */
+.radio-button {
+    -fx-padding: 5;
+    -fx-text-fill: #333;
+}
+
+/* DatePicker styling */
+.date-picker {
+    -fx-padding: 5;
+    -fx-background-color: #add8e6;
+    -fx-border-color: #333;
+    -fx-border-width: 1;
+}
+
+/* TextField styling */
+.text-field {
+    -fx-padding: 5;
+    -fx-background-color: #ffffff;
+}
+
+/* TextArea styling */
+.text-area {
+    -fx-padding: 5;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #add8e6;
+}
